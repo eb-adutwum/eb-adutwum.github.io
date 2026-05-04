@@ -1,291 +1,254 @@
-/* Accent Color */
-:root {
-  --accent: #10d4aa; /* Emerald Green */
-  --background: #363636; /* Off-white */
-  --text-dark: #e6e6e6; 
-  --ash: #b8b8b8;
-}
-
-/* Reset */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
+:root {
+  --bg: #fff;
+  --text: #111;
+  --subtle-text: #333;
+  --muted-text: #666;
+  --line: #ddd;
+}
+
 body {
-  font-family: 'Fira Code', 'Courier New', monospace;
-  background-color: var(--background);
-  color: var(--text-dark);
-  line-height: 1.7;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  max-width: 720px;
+  margin: 64px auto;
+  padding: 0 24px;
+  line-height: 1.74;
+  font-size: 18px;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
 }
 
-/* Center content but keep dividers full width */
-.container {
-  max-width: 920px;
-  margin: 5px auto;
-  padding: 0 1rem;
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
 }
 
-/* Header */
-header {
-  padding: 2rem 0 1rem;
-  border-bottom: 1px solid #ddd;
-  text-align: center;
+.skip-link:focus {
+  left: 24px;
+  top: 16px;
+  z-index: 1000;
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 6px 10px;
 }
 
-header .avatar img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  /* border: 2px solid var(--accent); */
+h1 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0 0 6px;
 }
 
-header h1 {
-  font-size: 2rem;
-  color: var(--accent);
-  margin-bottom: 0.5rem;
+.subtitle {
+  color: var(--subtle-text);
+  max-width: 620px;
+  margin: 0;
 }
 
-/* Navigation */
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 0.5rem;
+nav {
+  margin: 20px 0 56px;
+  font-size: 15px;
+  line-height: 1.9;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: var(--accent);
+nav .sep {
+  color: var(--muted-text);
+  margin: 0 8px;
+}
+
+.sep {
+  color: var(--muted-text);
+  margin: 0 8px;
+}
+
+nav a[aria-current="page"] {
   font-weight: 600;
-  transition: color 0.2s ease;
 }
 
-nav ul li a:hover {
-  color: var(--ash);
+h2 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 52px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 6px;
+}
+
+h3 {
+  margin: 0 0 4px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+p {
+  margin: 0 0 14px;
+  max-width: 68ch;
+}
+
+a {
+  color: var(--text);
   text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+  font-weight: 600;
 }
 
-/* Intro Section */
-.intro {
-  font-size: 1.05rem;
-  margin: 2rem 0;
+a:hover {
+  color: #444;
 }
 
-.intro strong {
-  color: var(--accent);
+a:focus-visible {
+  outline: 1px solid var(--text);
+  outline-offset: 2px;
 }
 
-/* Divider (full width, text confined) */
+main {
+  padding-bottom: 8px;
+}
+
+section + section {
+  margin-top: 8px;
+}
+
+ul {
+  margin: 0 0 14px 20px;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  line-height: 1.62;
+}
+
+li::marker {
+  color: #777;
+}
+
+strong {
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+em {
+  color: #555;
+  font-style: italic;
+}
+
+.work-item {
+  margin: 24px 0;
+}
+
+.tags,
+.date {
+  color: var(--muted-text);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 13px;
+}
+
+.muted {
+  color: #666;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.reference {
+  color: var(--muted-text);
+}
+
+.quote-block {
+  margin: 24px 0 18px;
+  padding-left: 14px;
+  border-left: 1px solid var(--line);
+  color: #444;
+}
+
+.quote-block p {
+  margin-bottom: 10px;
+}
+
+.cv-renderer {
+  width: 100%;
+  height: 78vh;
+  border: 1px solid var(--line);
+}
+
+.plain-list {
+  list-style: none;
+  margin-left: 0;
+}
+
+.plain-list li {
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.plain-list li:last-child {
+  border-bottom: none;
+}
+
+.plain-list .date {
+  display: inline-block;
+  min-width: 44px;
+}
+
+.clean-list {
+  margin-top: 2px;
+}
+
 hr {
   border: none;
-  border-top: 1px solid var(--accent);
-  margin: 2rem 0;
+  border-top: 1px solid var(--line);
+  margin: 48px 0;
 }
 
-/* Quote Section */
-.quote {
-  font-style: italic;
-  color: #ffffff;
-  background: #363636;
-  padding: 1.5rem;
-  border-left: 4px solid var(--accent);
-}
-
-/* Footer */
 footer {
-  text-align: center;
-  font-size: 0.9rem;
-  color: var(--ash);
-  padding: 2rem 0;
-  border-top: 2px solid #cacaca;
-  margin-top: 5rem;
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  color: var(--muted-text);
+  font-size: 14px;
 }
 
-/* Page Title */
-main h2 {
-  color: var(--accent);
-  margin-bottom: 0.5rem;
+.work-item + .work-item {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 18px;
 }
 
-/* Writings List */
-.writings-list {
-  margin: 1.5rem 0;
-  padding-left: 1.5rem;
+.writing article p {
+  margin-bottom: 16px;
 }
 
-.writings-list li {
-  margin-bottom: 1rem;
-  font-size: 1.05rem;
+.writing article h3 {
+  margin-top: 26px;
 }
 
-.writings-list a {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s ease;
-}
+@media (max-width: 640px) {
+  body {
+    margin: 32px auto;
+    padding: 0 18px;
+    font-size: 17px;
+  }
 
-.writings-list a:hover {
-  color: var(--ash);
-  text-decoration: underline;
-}
+  h1 {
+    font-size: 29px;
+  }
 
-/* Active Nav Item */
-nav ul li a.active {
-  border-bottom: 2px solid var(--accent);
-  padding-bottom: 2px;
-}
+  nav {
+    margin: 18px 0 44px;
+    line-height: 2;
+  }
 
-/* Writings List with Dates (No Bullets) */
-.writings-list {
-  margin: 1.5rem 0;
-  padding: 0;
-  list-style: none; /* removes bullets */
-}
-
-.writings-list li {
-  display: flex;
-  align-items: baseline;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  font-size: 1.05rem;
-  border-bottom: 1.5px solid #d8d2d2; /* light separator */
-  padding-bottom: 0.5rem;
-}
-
-.writings-list .date {
-  font-size: 0.95rem;
-  color: gray;
-  min-width: 100px; /* keeps dates aligned */
-  font-weight: 600;
-}
-
-.writings-list a {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 550;
-  transition: color 0.2s ease;
-}
-
-.writings-list a:hover {
-  color: var(--ash);
-  text-decoration: underline;
-}
-
-/* Projects List */
-.projects-list {
-  margin: 2rem 0;
-}
-
-.project-item {
-  padding: 1rem 0;
-  border-bottom: 1px solid #eee;
-}
-
-.project-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 0.3rem;
-}
-
-.project-header a {
-  font-weight: 600;
-  color: var(--accent);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.project-header a:hover {
-  color: var(--ash);
-  text-decoration: underline;
-}
-
-.project-header .year {
-  font-size: 0.9rem;
-  color: var(--ash);
-}
-
-.project-item .desc {
-  font-size: 0.95rem;
-  color: #999999;
-}
-
-
-/* Publications styling */
-.publications {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.pub {
-  background-color: #363636;
-  border: 1px solid #6d6d6d;
-  border-left: 6px solid var(--accent); /* bright green accent */
-  padding: 1rem 1.5rem;
-  border-radius: 6px;
-  box-shadow: 0px 2px 4px rgba(0,0,0,0.05);
-}
-
-.pub h3 {
-  margin: 0 0 0.5rem 0;
-  font-size: medium;
-  color: #cfcfcf;
-}
-
-.pub p {
-  margin: 0.3rem 0;
-  color: #aaaaaa;
-}
-
-.pub .journal {
-  color: #aaaaaa;
-  font-style: italic;
-}
-
-.pub a{
-  color: rgb(115, 226, 217);
-}
-
-
-/* Article page */
-.writing {
-  max-width: 800px;
-  margin: 2rem auto;
-  line-height: 1.7;
-}
-
-.writing h2 {
-  font-size: 1.6rem;
-  margin-bottom: 0.5rem;
-  color: var(--accent);
-}
-
-.writing .subtitle {
-  font-size: 1rem;
-  color: #a1a1a1;
-  margin-bottom: 2rem;
-}
-
-.writing h3 {
-  font-size: 1.2rem;
-  margin-top: 2rem;
-  color: #a0a0a0;
-}
-
-.writing p {
-  margin: 1rem 0;
-  color: #ffffff;
-}
-
-.writing .reference {
-  color: #a7a7a7;
-  font-size: 0.9rem;
+  .cv-renderer {
+    height: 66vh;
+  }
 }

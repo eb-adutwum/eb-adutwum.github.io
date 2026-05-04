@@ -3,48 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects - Elijah Boateng</title>
+  <title>Projects - Elijah K. A. Boateng</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#content">Skip to content</a>
   <header>
-    <div class="container">
-      <div class="avatar">
-        <img src="avatar.png" alt="Profile Picture">
-      </div>
-      <h1>Elijah Boateng</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="writings.html">Writings</a></li>
-          <li><a href="projects.html" class="active">Projects</a></li>
-          <li><a href="publications.html">Publications</a></li>
-        </ul>
-      </nav>
-    </div>
+    <h1>Elijah K. A. Boateng</h1>
+    <p class="subtitle">Selected applied machine learning and systems work.</p>
+    <nav aria-label="Primary navigation">
+      <a href="index.html">home</a><span class="sep">/</span>
+      <a href="projects.html" aria-current="page">projects</a><span class="sep">/</span>
+      <a href="publications.html">publications</a><span class="sep">/</span>
+      <a href="cv.html">cv</a><span class="sep">/</span>
+      <a href="index.html#contact">contact</a>
+    </nav>
   </header>
 
-  <main class="container">
-          <br>
-    <h2>Projects</h2>
-    <p>A few things I’ve built, explored, or tinkered with along the way.</p>
+  <main id="content">
+    <section>
+      <h2>Selected work</h2>
 
-    <div class="projects-list">
-      <div class="project-item">
-        <div class="project-header">
-          <a href="https://test.pypi.org/project/programming-math/" target="_blank">Programming Math</a>
-          <span class="year">2025</span>
-        </div>
-        <p class="desc">
-          Built a Python library for performing algebraic and calculus operations programmatically. 
-          The library includes functions for symbolic computation such as equation solving and finding limits.
-        </p>
+      <div class="work-item">
+        <h3>AI healthcare recommendation system</h3>
+        <p>Retrieval-augmented treatment recommendation and adherence support for Ghanaian healthcare settings.</p>
+        <p class="tags">healthcare ai | rag | clinical decision support</p>
       </div>
-    </div>
+
+      <div class="work-item">
+        <h3>Robust face recognition in constrained environments</h3>
+        <p>A computer vision system for recognition under occlusion, pose variation, and lighting changes.</p>
+        <p class="tags">computer vision | biometrics | robust ml</p>
+      </div>
+
+      <div class="work-item">
+        <h3>StudentOS</h3>
+        <p>An academic operating system for planning, reflection, spaced repetition, and student support.</p>
+        <p class="tags">education ai | agents | learning systems</p>
+      </div>
+
+      <div class="work-item">
+        <h3>NokwarePay AI security analysis</h3>
+        <p>Threat modeling of fraud detection and LLM support systems using STRIDE, MITRE ATLAS, and NIST AI RMF.</p>
+        <p class="tags">ai security | mlsecops | trustworthy ai</p>
+      </div>
+
+      <div class="work-item">
+        <h3>Wav2Vec-U speech recognition study</h3>
+        <p>A study of unsupervised speech recognition through adversarial acoustic-symbol alignment.</p>
+        <p class="tags">speech ai | gans | representation learning</p>
+      </div>
+
+      <div class="work-item">
+        <h3>Classroom engagement recognition</h3>
+        <p>Video-based recognition of student engagement states using deep visual representations.</p>
+        <p class="tags">computer vision | videomae | affective computing</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Additional project link</h2>
+      <p>
+        <a href="https://test.pypi.org/project/programming-math/" target="_blank" rel="noopener noreferrer">Programming Math</a> - Python library for algebraic and calculus operations.
+      </p>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Elijah Boateng</p>
+    <p>&copy; 2026 Elijah K. A. Boateng</p>
   </footer>
 </body>
 </html>
