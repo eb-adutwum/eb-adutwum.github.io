@@ -1,39 +1,262 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Not Found - Elijah K. A. Boateng</title>
+  <title>Page Not Found — Elijah Boateng</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
-  <header>
-    <div class="header-identity">
-      <img class="site-avatar" src="avatar.png" alt="Portrait of Elijah K. A. Boateng">
-      <h1>Elijah K. A. Boateng</h1>
+
+  <!-- Floating Navigation Pill -->
+  <header class="nav-pill-wrapper">
+    <div class="nav-pill">
+      <a href="index.html" class="nav-logo" aria-label="Home">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </a>
+      <div class="nav-pill-actions">
+        <button class="nav-search-btn" id="open-palette-btn" aria-label="Search portfolio">
+          <span class="nav-search-left">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <span>Search..</span>
+          </span>
+          <span class="kbd-wrap">
+            <kbd class="key-cap">Cmd</kbd>
+            <span class="key-plus">+</span>
+            <kbd class="key-cap">K</kbd>
+          </span>
+        </button>
+        <button class="nav-theme-btn" id="theme-toggle-btn" aria-label="Toggle theme">
+          <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg id="theme-icon-sun" style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+      </div>
     </div>
-    <p class="subtitle">The page you requested is not available.</p>
-    <nav aria-label="Primary navigation">
-      <a href="index.html">home</a><span class="sep">/</span>
-      <a href="projects.html">projects</a><span class="sep">/</span>
-      <a href="publications.html">publications</a><span class="sep">/</span>
-      <a href="learning.html">learning</a><span class="sep">/</span>
-      <a href="cv.html">cv</a><span class="sep">/</span>
-      <a href="index.html#contact">contact</a>
-    </nav>
   </header>
 
-  <main id="content">
-    <section>
-      <h2>Not Found</h2>
-      <p>The URL may be incorrect or the page may have been moved.</p>
-      <p><a href="index.html">Return to homepage</a></p>
+  <main class="container" id="content">
+    <section class="section" style="padding-top: 180px; text-align: center;">
+      <div class="section-tagline">404 Error</div>
+      <h1 class="hero-title" style="margin-top: 12px; margin-bottom: 16px;">Page Not Found.</h1>
+      <p class="hero-desc">The URL may be incorrect or the page has been moved.</p>
+      <div class="button-group">
+        <a href="index.html" class="btn btn-primary">Return to homepage &rarr;</a>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Elijah K. A. Boateng</p>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">E</div>
+          <div>
+            <div class="footer-name">Elijah Boateng</div>
+            <div class="footer-role">AI Researcher & Engineer</div>
+          </div>
+        </div>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="publications.html">Publications</a>
+          <a href="cv.html">CV</a>
+        </nav>
+        <div class="footer-copy">
+          Accra, Ghana • &copy; 2026
+        </div>
+      </div>
+    </div>
   </footer>
+
+  <!-- Command Palette / Search Modal -->
+  <div class="modal-overlay" id="palette-modal" aria-hidden="true">
+    <div class="palette-modal">
+      <div class="palette-search-row">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" class="palette-input" id="palette-search-input" placeholder="Search portfolio..." autocomplete="off">
+        <button class="palette-close-btn" id="close-palette-btn" aria-label="Close search">✕</button>
+      </div>
+      
+      <div class="palette-list" id="palette-items-list">
+        <a href="index.html#work" class="palette-item">
+          <span class="palette-item-num">01</span>
+          <div class="palette-item-info">
+            <div class="palette-item-title">Work</div>
+            <div class="palette-item-desc">Selected projects and things I've built</div>
+          </div>
+          <span class="palette-item-arrow">↗</span>
+        </a>
+
+        <a href="index.html#experience" class="palette-item">
+          <span class="palette-item-num">02</span>
+          <div class="palette-item-info">
+            <div class="palette-item-title">Experience</div>
+            <div class="palette-item-desc">My professional & research experience</div>
+          </div>
+          <span class="palette-item-arrow">↗</span>
+        </a>
+
+        <a href="index.html#skills" class="palette-item">
+          <span class="palette-item-num">03</span>
+          <div class="palette-item-info">
+            <div class="palette-item-title">Skills</div>
+            <div class="palette-item-desc">Technologies and tools I work with</div>
+          </div>
+          <span class="palette-item-arrow">↗</span>
+        </a>
+
+        <a href="index.html#contact" class="palette-item">
+          <span class="palette-item-num">04</span>
+          <div class="palette-item-info">
+            <div class="palette-item-title">Contact</div>
+            <div class="palette-item-desc">Get in touch & collaborative opportunities</div>
+          </div>
+          <span class="palette-item-arrow">↗</span>
+        </a>
+
+        <a href="publications.html" class="palette-item">
+          <span class="palette-item-num">05</span>
+          <div class="palette-item-info">
+            <div class="palette-item-title">Publications</div>
+            <div class="palette-item-desc">Academic papers and thesis work</div>
+          </div>
+          <span class="palette-item-arrow">↗</span>
+        </a>
+
+        <a href="cv.html" class="palette-item">
+          <span class="palette-item-num">06</span>
+          <div class="palette-item-info">
+            <div class="palette-item-title">Curriculum Vitae</div>
+            <div class="palette-item-desc">Read or download full CV document</div>
+          </div>
+          <span class="palette-item-arrow">↗</span>
+        </a>
+      </div>
+
+      <div class="palette-footer">
+        <span>Press <kbd style="font-family:inherit;background:var(--card-bg);padding:2px 4px;border:1px solid var(--card-border);border-radius:4px;">ESC</kbd> to close</span>
+        <span class="kbd-wrap">
+          <kbd class="key-cap">Cmd</kbd>
+          <span class="key-plus">+</span>
+          <kbd class="key-cap">K</kbd>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Theme Management
+    const themeToggleBtn = document.getElementById('theme-toggle-btn');
+    const moonIcon = document.getElementById('theme-icon-moon');
+    const sunIcon = document.getElementById('theme-icon-sun');
+    const htmlElement = document.documentElement;
+
+    function applyTheme(theme) {
+      htmlElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      if (theme === 'dark') {
+        moonIcon.style.display = 'none';
+        sunIcon.style.display = 'block';
+      } else {
+        moonIcon.style.display = 'block';
+        sunIcon.style.display = 'none';
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    applyTheme(savedTheme);
+
+    themeToggleBtn.addEventListener('click', () => {
+      const current = htmlElement.getAttribute('data-theme');
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    // Command Palette Modal
+    const paletteModal = document.getElementById('palette-modal');
+    const openPaletteBtn = document.getElementById('open-palette-btn');
+    const closePaletteBtn = document.getElementById('close-palette-btn');
+    const paletteSearchInput = document.getElementById('palette-search-input');
+    const paletteList = document.getElementById('palette-items-list');
+    const paletteItems = Array.from(paletteList.querySelectorAll('.palette-item'));
+
+    function openModal() {
+      paletteModal.classList.add('active');
+      paletteModal.setAttribute('aria-hidden', 'false');
+      paletteSearchInput.value = '';
+      filterItems('');
+      setTimeout(() => paletteSearchInput.focus(), 50);
+    }
+
+    function closeModal() {
+      paletteModal.classList.remove('active');
+      paletteModal.setAttribute('aria-hidden', 'true');
+    }
+
+    if (openPaletteBtn) openPaletteBtn.addEventListener('click', openModal);
+    if (closePaletteBtn) closePaletteBtn.addEventListener('click', closeModal);
+
+    paletteModal.addEventListener('click', (e) => {
+      if (e.target === paletteModal) {
+        closeModal();
+      }
+    });
+
+    paletteItems.forEach(item => {
+      item.addEventListener('click', () => {
+        closeModal();
+      });
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        if (paletteModal.classList.contains('active')) {
+          closeModal();
+        } else {
+          openModal();
+        }
+      } else if (e.key === 'Escape' && paletteModal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+
+    function filterItems(query) {
+      const lower = query.toLowerCase().trim();
+      paletteItems.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        if (text.includes(lower)) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    paletteSearchInput.addEventListener('input', (e) => {
+      filterItems(e.target.value);
+    });
+  </script>
 </body>
 </html>

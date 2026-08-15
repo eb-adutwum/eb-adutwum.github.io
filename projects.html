@@ -1,80 +1,482 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects - Elijah K. A. Boateng</title>
+  <title>Projects — Elijah Boateng</title>
+  <meta name="description" content="Technical and research projects by Elijah Boateng across multi-agent systems, clinical healthcare AI, biometrics, and low-resource speech recognition.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
-  <header>
-    <div class="header-identity">
-      <img class="site-avatar" src="avatar.png" alt="Portrait of Elijah K. A. Boateng">
-      <h1>Elijah K. A. Boateng</h1>
+
+  <!-- Floating Navigation Pill (Home Icon Logo on Secondary Page) -->
+  <header class="nav-pill-wrapper">
+    <div class="nav-pill">
+      <a href="index.html" class="nav-logo" aria-label="Home">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </a>
+
+      <div class="nav-pill-actions">
+        <button class="nav-search-btn" id="open-palette-btn" aria-label="Search portfolio">
+          <span class="nav-search-left">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <span>Search..</span>
+          </span>
+          <span class="kbd-wrap">
+            <kbd class="key-cap">Cmd</kbd>
+            <span class="key-plus">+</span>
+            <kbd class="key-cap">K</kbd>
+          </span>
+        </button>
+        <button class="nav-theme-btn" id="theme-toggle-btn" aria-label="Toggle theme">
+          <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg id="theme-icon-sun" style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+      </div>
     </div>
-    <p class="subtitle">Selected applied machine learning and systems work.</p>
-    <nav aria-label="Primary navigation">
-      <a href="index.html">home</a><span class="sep">/</span>
-      <a href="projects.html" aria-current="page">projects</a><span class="sep">/</span>
-      <a href="publications.html">publications</a><span class="sep">/</span>
-      <a href="learning.html">learning</a><span class="sep">/</span>
-      <a href="cv.html">cv</a><span class="sep">/</span>
-      <a href="index.html#contact">contact</a>
-    </nav>
   </header>
 
-  <main id="content">
-    <section>
-      <h2>Selected work</h2>
-
-      <div class="work-item">
-        <h3>AI healthcare recommendation system</h3>
-        <p>Retrieval-augmented treatment recommendation and adherence support for Ghanaian healthcare settings.</p>
-        <p class="tags">healthcare ai | rag | clinical decision support</p>
+  <main class="container" id="content">
+    <section class="section" style="padding-top: 150px;">
+      <div class="section-header" style="border-top: none; padding-top: 0; margin-bottom: 44px;">
+        <div class="section-tagline">Portfolio</div>
+        <div class="section-title-row">
+          <h1 class="section-title">Research & Technical Projects</h1>
+          <div class="section-meta">06 projects</div>
+        </div>
       </div>
 
-      <div class="work-item">
-        <h3>Robust face recognition in constrained environments</h3>
-        <p>A computer vision system for recognition under occlusion, pose variation, and lighting changes.</p>
-        <p class="tags">computer vision | biometrics | robust ml</p>
-      </div>
+      <!-- Tessel-Style Projects in Threes -->
+      <div class="tessel-grid-3">
 
-      <div class="work-item">
-        <h3>StudentOS</h3>
-        <p>An academic operating system for planning, reflection, spaced repetition, and student support.</p>
-        <p class="tags">education ai | agents | learning systems</p>
-      </div>
+        <!-- Card 1: Healthcare AI (The Aurum Institute) -->
+        <div class="tessel-card">
+          <div class="tessel-banner banner-medical">
+            <div class="tessel-banner-top">
+              <div class="tessel-brand">The Aurum Institute Ghana</div>
+            </div>
 
-      <div class="work-item">
-        <h3>NokwarePay AI security analysis</h3>
-        <p>Threat modeling of fraud detection and LLM support systems using STRIDE, MITRE ATLAS, and NIST AI RMF.</p>
-        <p class="tags">ai security | mlsecops | trustworthy ai</p>
-      </div>
+            <div class="tessel-banner-mid">
+              <h3 class="tessel-headline">Aires: Agentic Clinical<br>Decision Support</h3>
+              <p class="tessel-subtext">
+                Multi-layer agentic clinical decision-support pipeline for bacterial infections, grounded in Ghana's Standard Treatment Guidelines and Essential Medicines List.
+              </p>
+            </div>
+          </div>
 
-      <div class="work-item">
-        <h3>Wav2Vec-U speech recognition study</h3>
-        <p>A study of unsupervised speech recognition through adversarial acoustic-symbol alignment.</p>
-        <p class="tags">speech ai | gans | representation learning</p>
-      </div>
+          <div class="tessel-contributions">
+            <div class="contrib-item">
+              <div class="contrib-title">TRACE Reasoning & Safety Gates</div>
+              <div class="contrib-desc">Enforces citation-grounded outputs, deterministic contraindication blocking, and combination therapy checks.</div>
+            </div>
 
-      <div class="work-item">
-        <h3>Classroom engagement recognition</h3>
-        <p>Video-based recognition of student engagement states using deep visual representations.</p>
-        <p class="tags">computer vision | videomae | affective computing</p>
-      </div>
-    </section>
+            <div class="contrib-item">
+              <div class="contrib-title">92% Compliance Across 5,000 Records</div>
+              <div class="contrib-desc">Cut doctor recommendation time from 7 to 2 mins with CDS Hooks and SMART on FHIR integration architecture.</div>
+            </div>
+          </div>
+        </div>
 
-    <section>
-      <h2>Additional project link</h2>
-      <p>
-        <a href="https://test.pypi.org/project/programming-math/" target="_blank" rel="noopener noreferrer">Programming Math</a> - Python library for algebraic and calculus operations.
-      </p>
+        <!-- Card 2: Robust Face Recognition (Scientific African & Best CS Thesis) -->
+        <div class="tessel-card">
+          <div class="tessel-banner banner-vision">
+            <div class="tessel-banner-top">
+              <div class="tessel-brand">Best CS Thesis '23 • Scientific African</div>
+            </div>
+
+            <div class="tessel-banner-mid">
+              <h3 class="tessel-headline">FaceNet Recognition<br>Under Constraints</h3>
+              <p class="tessel-subtext">
+                Investigated novel approaches to deep face recognition under compounded constraints: extreme mask occlusions, dynamic yaw angles (±60°), and low lighting.
+              </p>
+            </div>
+
+            <div class="tessel-banner-bottom">
+              <a href="https://www.sciencedirect.com/science/article/pii/S2468227623004611" target="_blank" rel="noopener noreferrer" class="tessel-action-btn">
+                <span>Read on ScienceDirect ↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="tessel-contributions">
+            <div class="contrib-item">
+              <div class="contrib-title">+15% Accuracy with Wavelet & PCA</div>
+              <div class="contrib-desc">Engineered hybrid DWT-PCA algorithm isolating unmasked upper-facial biometrics in heavy occlusion.</div>
+            </div>
+
+            <div class="contrib-item">
+              <div class="contrib-title">1,000+ Daily Attendance Verifications</div>
+              <div class="contrib-desc">Awarded Best CS Thesis at Ashesi University and published in Elsevier's Scientific African (2024).</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: StudentOS Academic Planning -->
+        <div class="tessel-card">
+          <div class="tessel-banner banner-studentos">
+            <div class="tessel-banner-top">
+              <div class="tessel-brand">StudentOS • AI Product</div>
+            </div>
+
+            <div class="tessel-banner-mid">
+              <h3 class="tessel-headline">StudentOS: AI-Powered<br>Academic Planning</h3>
+              <p class="tessel-subtext">
+                Intelligent academic companion transforming course deadlines, study goals, workload constraints, and reflections into actionable day-to-day learning plans.
+              </p>
+            </div>
+          </div>
+
+          <div class="tessel-contributions">
+            <div class="contrib-item">
+              <div class="contrib-title">Adaptive Scheduling & Spaced Repetition</div>
+              <div class="contrib-desc">Dynamic planning engine translating broad goals into measurable objectives based on task completion and reflections.</div>
+            </div>
+
+            <div class="contrib-item">
+              <div class="contrib-title">Agent-Driven Study Recommendations</div>
+              <div class="contrib-desc">Unified dashboard integrating courses, deadlines, study sessions, and deadline-proximity signals.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Interius Multi-Agent Backend Generation -->
+        <div class="tessel-card">
+          <div class="tessel-banner banner-security">
+            <div class="tessel-banner-top">
+              <div class="tessel-brand">Interius Multi-Agent Systems</div>
+            </div>
+
+            <div class="tessel-banner-mid">
+              <h3 class="tessel-headline">Autonomous Backend<br>Engineering System</h3>
+              <p class="tessel-subtext">
+                Staged multi-agent pipeline transforming natural-language specifications into working, multi-file backend applications with runtime self-repair.
+              </p>
+            </div>
+          </div>
+
+          <div class="tessel-contributions">
+            <div class="contrib-item">
+              <div class="contrib-title">90% End-to-End Success Rate</div>
+              <div class="contrib-desc">Coordinated requirements, architecture, implementation, review, and auto-repair agents.</div>
+            </div>
+
+            <div class="contrib-item">
+              <div class="contrib-title">Sandboxed Runtime Validation</div>
+              <div class="contrib-desc">Automated execution repair loops with one-command Docker/Git/Render automated deployment.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: Unsupervised Speech (wav2vec-U) -->
+        <div class="tessel-card">
+          <div class="tessel-banner banner-speech">
+            <div class="tessel-banner-top">
+              <div class="tessel-brand">wav2vec-U Acoustic Research</div>
+            </div>
+
+            <div class="tessel-banner-mid">
+              <h3 class="tessel-headline">Unsupervised ASR:<br>Zero-Paired Data</h3>
+              <p class="tessel-subtext">
+                From-scratch reproduction of the wav2vec-U architecture mapping self-supervised acoustic representations to phonemes without paired speech-text data.
+              </p>
+            </div>
+
+            <div class="tessel-banner-bottom">
+              <a href="https://github.com/eb-adutwum/wav2vec_unsupervised/tree/prosit3-me" target="_blank" rel="noopener noreferrer" class="tessel-action-btn">
+                <span>View Code ↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="tessel-contributions">
+            <div class="contrib-item">
+              <div class="contrib-title">Adversarial GAN Alignment</div>
+              <div class="contrib-desc">Built generator-discriminator network converting wav2vec 2.0 features into phoneme distributions with unpaired text.</div>
+            </div>
+
+            <div class="contrib-item">
+              <div class="contrib-title">Low-Resource Acoustic Optimization</div>
+              <div class="contrib-desc">Engineered unsupervised phoneme segmenters and decoding pipelines adapted for low-compute African speech.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: Ghanaian Speech ASR & Transformer Translation -->
+        <div class="tessel-card">
+          <div class="tessel-banner banner-affective">
+            <div class="tessel-banner-top">
+              <div class="tessel-brand">AfriSpeech & Transformer NLP</div>
+            </div>
+
+            <div class="tessel-banner-mid">
+              <h3 class="tessel-headline">Ghanaian ASR &<br>Transformer Translation</h3>
+              <p class="tessel-subtext">
+                Fine-tuned Whisper on Ghanaian-accented English from AfriSpeech, plus built a from-scratch Transformer encoder-decoder reaching 51.77 BLEU.
+              </p>
+            </div>
+
+            <div class="tessel-banner-bottom" style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <a href="https://github.com/eb-adutwum/deep-learning-asr-pr-3/blob/main/AfriSpeech_Transformer_ASR.ipynb" target="_blank" rel="noopener noreferrer" class="tessel-action-btn">
+                <span>ASR Code ↗</span>
+              </a>
+              <a href="http://github.com/eb-adutwum/deep-learning-asr-pr-3/blob/main/Machine_Translation_Transformer.ipynb" target="_blank" rel="noopener noreferrer" class="tessel-action-btn">
+                <span>Translation Code ↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="tessel-contributions">
+            <div class="contrib-item">
+              <div class="contrib-title">34.28% WER on Ghanaian Accents</div>
+              <div class="contrib-desc">Cut ASR error from an 85% RNN-CTC baseline on low-resource, Twi-influenced English audio (1,315 pairs).</div>
+            </div>
+
+            <div class="contrib-item">
+              <div class="contrib-title">51.77 BLEU Score on 130K+ Pairs</div>
+              <div class="contrib-desc">From-scratch Transformer encoder-decoder implementing multi-head attention and positional encodings.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </section>
   </main>
 
+  <!-- Full Width Divider -->
+  <hr class="full-divider">
+
   <footer>
-    <p>&copy; 2026 Elijah K. A. Boateng</p>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">E</div>
+          <div>
+            <div class="footer-name">Elijah Kwaku Adutwum Boateng</div>
+            <div class="footer-role">AI Research Engineer • MPhil Candidate</div>
+          </div>
+        </div>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="publications.html">Publications</a>
+          <a href="cv.html">CV</a>
+        </nav>
+        <div class="footer-copy">
+          Accra, Ghana • &copy; 2026
+        </div>
+      </div>
+    </div>
   </footer>
+
+  <!-- Command Palette / Search Modal -->
+  <div class="modal-overlay" id="palette-modal" aria-hidden="true">
+    <div class="palette-modal">
+      <div class="palette-search-row">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" class="palette-input" id="palette-search-input" placeholder="Search projects, skills, text, sections..." autocomplete="off">
+        <button class="palette-close-btn" id="close-palette-btn" aria-label="Close search">✕</button>
+      </div>
+      
+      <div class="palette-list" id="palette-items-list">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <div class="palette-footer">
+        <span>Press <kbd style="font-family:inherit;background:var(--card-bg);padding:2px 4px;border:1px solid var(--card-border);border-radius:4px;">ESC</kbd> to close</span>
+        <span class="kbd-wrap">
+          <kbd class="key-cap">Cmd</kbd>
+          <span class="key-plus">+</span>
+          <kbd class="key-cap">K</kbd>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Theme Management
+    const themeToggleBtn = document.getElementById('theme-toggle-btn');
+    const moonIcon = document.getElementById('theme-icon-moon');
+    const sunIcon = document.getElementById('theme-icon-sun');
+    const htmlElement = document.documentElement;
+
+    function applyTheme(theme) {
+      htmlElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      if (theme === 'dark') {
+        moonIcon.style.display = 'none';
+        sunIcon.style.display = 'block';
+      } else {
+        moonIcon.style.display = 'block';
+        sunIcon.style.display = 'none';
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    applyTheme(savedTheme);
+
+    themeToggleBtn.addEventListener('click', () => {
+      const current = htmlElement.getAttribute('data-theme');
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    // =========================================================================
+    // DYNAMIC FULL-TEXT SEARCH ENGINE
+    // =========================================================================
+    const searchDatabase = [
+      { title: "Home Portfolio", desc: "Return to main homepage portfolio and selected work", tag: "PAGE", url: "index.html" },
+      { title: "Selected Work", desc: "Aires Clinical CDS, FaceNet biometrics, StudentOS, Interius multi-agent, wav2vec-U, Whisper", tag: "PAGE", url: "projects.html" },
+      { title: "Publications & Research", desc: "Scientific African (Elsevier 2024), Ashesi Honors Thesis, iGEM Bio-Prospecting Journal Paper", tag: "PAGE", url: "publications.html" },
+      { title: "Research Interests & Goals", desc: "Multi-agent learning, healthcare CDS, low-resource speech ASR, biometrics under constraints", tag: "SECTION", url: "index.html#research" },
+      { title: "Curriculum Vitae", desc: "Complete academic and engineering CV document with PDF download", tag: "PAGE", url: "cv.html" },
+
+      // Real Projects
+      { title: "Aires: Agentic Clinical Decision Support", desc: "The Aurum Institute Ghana — TRACE reasoning, CDS Hooks, SMART on FHIR, Ghana STGs/EML across 5,000 records", tag: "PROJECT", selector: ".banner-medical" },
+      { title: "FaceNet Recognition Under Multiple Constraints", desc: "Best CS Thesis '23 • Scientific African — DWT-PCA wavelet algorithms, occlusion loss, 15% accuracy gain", tag: "PROJECT", selector: ".banner-vision" },
+      { title: "StudentOS: AI-Powered Academic Planning", desc: "Intelligent companion transforming deadlines, constraints, and reflections into actionable daily study plans", tag: "PROJECT", selector: ".banner-studentos" },
+      { title: "Interius: Autonomous Backend Engineering System", desc: "Multi-agent staged generation converting natural language specs into multi-file backend apps with auto-repair", tag: "PROJECT", selector: ".banner-security" },
+      { title: "Unsupervised Speech Recognition (wav2vec-U)", desc: "From-scratch reproduction of adversarial wav2vec-U architecture mapping speech to text with zero paired data", tag: "PROJECT", selector: ".banner-speech" },
+      { title: "Ghanaian Speech ASR & Transformer Translation", desc: "Whisper fine-tuning on AfriSpeech Ghanaian accents (34.28% WER) + from-scratch Transformer (51.77 BLEU)", tag: "PROJECT", selector: ".banner-affective" }
+    ];
+
+    const paletteModal = document.getElementById('palette-modal');
+    const openPaletteBtn = document.getElementById('open-palette-btn');
+    const closePaletteBtn = document.getElementById('close-palette-btn');
+    const paletteSearchInput = document.getElementById('palette-search-input');
+    const paletteList = document.getElementById('palette-items-list');
+
+    function renderSearchResults(query) {
+      paletteList.innerHTML = '';
+      const clean = query.toLowerCase().trim();
+
+      const matches = clean === '' 
+        ? searchDatabase.slice(0, 6) 
+        : searchDatabase.filter(item => {
+            return item.title.toLowerCase().includes(clean) || item.desc.toLowerCase().includes(clean) || item.tag.toLowerCase().includes(clean);
+          });
+
+      if (matches.length === 0) {
+        paletteList.innerHTML = `
+          <div style="padding: 24px; text-align: center; color: var(--text-muted); font-size: 13.5px;">
+            No results found for "<strong style="color:var(--text-primary);">${escapeHTML(query)}</strong>". Try searching for PyTorch, Aurum, FaceNet, RAG, Skills, or Work.
+          </div>
+        `;
+        return;
+      }
+
+      matches.forEach((item, idx) => {
+        const itemEl = document.createElement('a');
+        itemEl.className = 'palette-item';
+        itemEl.href = item.url || '#';
+
+        let highlightedTitle = item.title;
+        let highlightedDesc = item.desc;
+
+        if (clean !== '') {
+          const regex = new RegExp(`(${clean.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+          highlightedTitle = highlightedTitle.replace(regex, '<span class="palette-snippet-highlight">$1</span>');
+          highlightedDesc = highlightedDesc.replace(regex, '<span class="palette-snippet-highlight">$1</span>');
+        }
+
+        itemEl.innerHTML = `
+          <span class="palette-item-num">${String(idx + 1).padStart(2, '0')}</span>
+          <div class="palette-item-info">
+            <div class="palette-item-title">
+              ${highlightedTitle}
+              <span class="palette-match-tag">${item.tag}</span>
+            </div>
+            <div class="palette-item-desc">${highlightedDesc}</div>
+          </div>
+          <span class="palette-item-arrow">↗</span>
+        `;
+
+        itemEl.addEventListener('click', (e) => {
+          if (item.selector) {
+            const targetEl = document.querySelector(item.selector)?.closest('.tessel-card');
+            if (targetEl) {
+              e.preventDefault();
+              closeModal();
+              targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              targetEl.classList.remove('search-match-highlight');
+              void targetEl.offsetWidth;
+              targetEl.classList.add('search-match-highlight');
+              return;
+            }
+          }
+          if (item.url && !item.url.includes('#')) {
+            return;
+          }
+        });
+
+        paletteList.appendChild(itemEl);
+      });
+    }
+
+    function escapeHTML(str) {
+      return str.replace(/[&<>'"]/g, 
+        tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+      );
+    }
+
+    function openModal() {
+      paletteModal.classList.add('active');
+      paletteModal.setAttribute('aria-hidden', 'false');
+      paletteSearchInput.value = '';
+      renderSearchResults('');
+      setTimeout(() => paletteSearchInput.focus(), 50);
+    }
+
+    function closeModal() {
+      paletteModal.classList.remove('active');
+      paletteModal.setAttribute('aria-hidden', 'true');
+    }
+
+    if (openPaletteBtn) openPaletteBtn.addEventListener('click', openModal);
+    if (closePaletteBtn) closePaletteBtn.addEventListener('click', closeModal);
+
+    paletteModal.addEventListener('click', (e) => {
+      if (e.target === paletteModal) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        if (paletteModal.classList.contains('active')) {
+          closeModal();
+        } else {
+          openModal();
+        }
+      } else if (e.key === 'Escape' && paletteModal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+
+    paletteSearchInput.addEventListener('input', (e) => {
+      renderSearchResults(e.target.value);
+    });
+  </script>
 </body>
 </html>

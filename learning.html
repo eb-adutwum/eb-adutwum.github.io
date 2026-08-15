@@ -1,100 +1,337 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Process of Knowing - Elijah K. A. Boateng</title>
+  <title>The Process of Knowing — Elijah Boateng</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
-  <header>
-    <div class="header-identity">
-      <img class="site-avatar" src="avatar.png" alt="Portrait of Elijah K. A. Boateng">
-      <h1>Elijah K. A. Boateng</h1>
+
+  <!-- Floating Navigation Pill -->
+  <header class="nav-pill-wrapper">
+    <div class="nav-pill">
+      <a href="index.html" class="nav-logo" aria-label="Home">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </a>
+      <div class="nav-pill-actions">
+        <button class="nav-search-btn" id="open-palette-btn" aria-label="Search portfolio">
+          <span class="nav-search-left">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <span>Search..</span>
+          </span>
+          <span class="kbd-wrap">
+            <kbd class="key-cap">Cmd</kbd>
+            <span class="key-plus">+</span>
+            <kbd class="key-cap">K</kbd>
+          </span>
+        </button>
+        <button class="nav-theme-btn" id="theme-toggle-btn" aria-label="Toggle theme">
+          <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg id="theme-icon-sun" style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+      </div>
     </div>
-    <p class="subtitle">Notes and essays on learning, systems, and research practice.</p>
-    <nav aria-label="Primary navigation">
-      <a href="index.html">home</a><span class="sep">/</span>
-      <a href="projects.html">projects</a><span class="sep">/</span>
-      <a href="publications.html">publications</a><span class="sep">/</span>
-      <a href="learning.html" aria-current="page">learning</a><span class="sep">/</span>
-      <a href="cv.html">cv</a><span class="sep">/</span>
-      <a href="index.html#contact">contact</a>
-    </nav>
   </header>
 
-  <main id="content" class="writing">
-    <article>
-      <h2>The Process of Knowing: A Guide to Learning</h2>
-      <p class="subtitle">Reflections on how we learn, why we learn, and what it means to truly know.</p>
+  <main class="container" id="content">
+    <div class="writing" style="padding-top: 130px; max-width: 900px; margin: 0 auto;">
+      <article>
+        <div class="section-header" style="border: none; padding-top: 0; margin-bottom: 32px;">
+          <div class="section-tagline">Essays & Reflections</div>
+          <div class="section-title-row">
+            <h1 class="section-title" style="font-size: 40px;">The Process of Knowing</h1>
+          </div>
+          <p class="subtitle" style="font-size: 16.5px; color: var(--text-secondary); margin-top: 12px; margin-bottom: 0;">A personal framework for learning, cognitive synthesis, and research practice.</p>
+        </div>
 
-      <section>
-        <h3>What is Learning?</h3>
-        <p>
-          Learning simply means the process of knowing something. Two things worthy of noting from this definition are
-          <em>process of knowing</em> and <em>the something</em>. Learning leads to knowledge, through which we trigger intelligence by
-          applying what we know or have learned and changing what we thought was great into something even better. All of this is built
-          on the infrastructure of wisdom, which to me is far more immaterial and spiritual - a gift from God
-          <span class="reference">[James 1:17]</span>.
-        </p>
+        <section style="margin-bottom: 32px;">
+          <h3 style="font-size: 20px; font-weight: 600; color: var(--text-primary); margin-bottom: 12px;">What is Learning?</h3>
+          <p style="font-size: 15.5px; line-height: 1.75; color: var(--text-secondary); margin-bottom: 16px;">
+            Learning simply means the process of knowing something. Two things worthy of noting from this definition are
+            <em>process of knowing</em> and <em>the something</em>. Learning leads to knowledge, through which we trigger intelligence by
+            applying what we know or have learned and changing what we thought was great into something even better. All of this is built
+            on the infrastructure of wisdom, which to me is far more immaterial and spiritual - a gift from God
+            <span style="color: var(--text-muted);">[James 1:17]</span>.
+          </p>
 
-        <p>
-          Consider a 1-year-old child who is developing the ability to walk. First, they mimic what they see others do (observation).
-          Then they try it themselves (intelligence). They stumble and fall (experience), so they start holding on to objects (adjustment),
-          and eventually take their first steps. Repeat this long enough and the child is walking.
-          The difference in how fast two children learn to walk may be due to intelligence (IQ, adaptability),
-          but there is also an inner impulse - a kind of wisdom - that drives them forward.
-        </p>
-      </section>
+          <p style="font-size: 15.5px; line-height: 1.75; color: var(--text-secondary);">
+            Consider a 1-year-old child who is developing the ability to walk. First, they mimic what they see others do (observation).
+            Then they try it themselves (intelligence). They stumble and fall (experience), so they start holding on to objects (adjustment),
+            and eventually take their first steps. Repeat this long enough and the child is walking.
+            The difference in how fast two children learn to walk may be due to intelligence (IQ, adaptability),
+            but there is also an inner impulse - a kind of wisdom - that drives them forward.
+          </p>
+        </section>
 
-      <section>
-        <h3>Why Do We Learn?</h3>
-        <p>
-          The child's example highlights a critical reason for learning: survival and growth.
-          Learning helps us pass down information essential to life - walking, eating, speaking.
-          As we grow, we use learning to gain literacy, professional skills, or even fashion and cooking.
-          At higher levels, we learn to innovate and create: designing cars, writing software, inventing medical technology.
-          Life continues and improves because we learn. In short: <em>everything we do in life, we learn somehow—good or bad.</em>
-        </p>
-      </section>
+        <section style="margin-bottom: 32px;">
+          <h3 style="font-size: 20px; font-weight: 600; color: var(--text-primary); margin-bottom: 12px;">Why Do We Learn?</h3>
+          <p style="font-size: 15.5px; line-height: 1.75; color: var(--text-secondary);">
+            The child's example highlights a critical reason for learning: survival and growth.
+            Learning helps us pass down information essential to life - walking, eating, speaking.
+            As we grow, we use learning to gain literacy, professional skills, or even fashion and cooking.
+            At higher levels, we learn to innovate and create: designing cars, writing software, inventing medical technology.
+            Life continues and improves because we learn. In short: <em>everything we do in life, we learn somehow—good or bad.</em>
+          </p>
+        </section>
 
-      <section>
-        <h3>How Do We Learn?</h3>
-        <p>
-          Humans have many ways to perceive information - sight, hearing, smell, touch, taste, and even emotions.
-          Any of these can work alone or together, creating over 50 possible combinations for perception.
-          But perception alone is not learning.
-        </p>
+        <section style="margin-bottom: 32px;">
+          <h3 style="font-size: 20px; font-weight: 600; color: var(--text-primary); margin-bottom: 12px;">How Do We Learn?</h3>
+          <p style="font-size: 15.5px; line-height: 1.75; color: var(--text-secondary); margin-bottom: 16px;">
+            Humans have many ways to perceive information - sight, hearing, smell, touch, taste, and even emotions.
+            Any of these can work alone or together, creating over 50 possible combinations for perception.
+            But perception alone is not learning.
+          </p>
 
-        <p>
-          True learning happens when we interact with information deeply enough that we can apply it beyond its original context.
-          That is why schools test knowledge using varied problems and why brilliant thinkers explain complex ideas through analogies.
-        </p>
+          <p style="font-size: 15.5px; line-height: 1.75; color: var(--text-secondary); margin-bottom: 16px;">
+            True learning happens when we interact with information deeply enough that we can apply it beyond its original context.
+            That is why schools test knowledge using varied problems and why brilliant thinkers explain complex ideas through analogies.
+          </p>
 
-        <p>
-          Learning requires synthesis and interaction. This is where many struggle - especially in academic settings, where
-          observation is limited, time is short, and failure carries a cost. Unlike the child learning to walk (whose failures do not "count"),
-          students often feel penalized for failure, making learning harder.
-        </p>
-      </section>
+          <p style="font-size: 15.5px; line-height: 1.75; color: var(--text-secondary);">
+            Learning requires synthesis and interaction. This is where many struggle - especially in academic settings, where
+            observation is limited, time is short, and failure carries a cost. Unlike the child learning to walk (whose failures do not "count"),
+            students often feel penalized for failure, making learning harder.
+          </p>
+        </section>
 
-      <section>
-        <h3>Learning in Practice</h3>
-        <p>
-          In academics, learning is framed around <strong>studying</strong> - giving full attention, time, and effort to acquiring knowledge.
-          It includes sourcing, perceiving, practicing, and retaining information.
-        </p>
-        <p>
-          The challenge today is time and distraction. We often hesitate to invest effort, fearing it may yield nothing.
-          But learning remains the only path to true knowing, whether in school, work, or life.
-        </p>
-      </section>
-    </article>
+        <section>
+          <h3 style="font-size: 20px; font-weight: 600; color: var(--text-primary); margin-bottom: 12px;">Learning in Practice</h3>
+          <p style="font-size: 15.5px; line-height: 1.75; color: var(--text-secondary); margin-bottom: 16px;">
+            In academics, learning is framed around <strong>studying</strong> - giving full attention, time, and effort to acquiring knowledge.
+            It includes sourcing, perceiving, practicing, and retaining information.
+          </p>
+          <p style="font-size: 15.5px; line-height: 1.75; color: var(--text-secondary);">
+            The challenge today is time and distraction. We often hesitate to invest effort, fearing it may yield nothing.
+            But learning remains the only path to true knowing, whether in school, work, or life.
+          </p>
+        </section>
+      </article>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2026 Elijah K. A. Boateng</p>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">E</div>
+          <div>
+            <div class="footer-name">Elijah Boateng</div>
+            <div class="footer-role">AI Researcher & Engineer</div>
+          </div>
+        </div>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="publications.html">Publications</a>
+          <a href="learning.html">Learning</a>
+          <a href="cv.html">CV</a>
+        </nav>
+        <div class="footer-copy">
+          Accra, Ghana • &copy; 2026
+        </div>
+      </div>
+    </div>
   </footer>
+
+  <!-- Command Palette / Search Modal -->
+  <div class="modal-overlay" id="palette-modal" aria-hidden="true">
+    <div class="palette-modal">
+      <div class="palette-search-row">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" class="palette-input" id="palette-search-input" placeholder="Search portfolio..." autocomplete="off">
+        <button class="palette-close-btn" id="close-palette-btn" aria-label="Close search">✕</button>
+      </div>
+      
+      <div class="palette-list" id="palette-items-list">
+        <a href="index.html#work" class="palette-item">
+          <span class="palette-item-num">01</span>
+          <div class="palette-item-info">
+            <div class="palette-item-title">Work</div>
+            <div class="palette-item-desc">Selected projects and things I've built</div>
+          </div>
+          <span class="palette-item-arrow">↗</span>
+        </a>
+
+        <a href="index.html#experience" class="palette-item">
+          <span class="palette-item-num">02</span>
+          <div class="palette-item-info">
+            <div class="palette-item-title">Experience</div>
+            <div class="palette-item-desc">My professional & research experience</div>
+          </div>
+          <span class="palette-item-arrow">↗</span>
+        </a>
+
+        <a href="index.html#skills" class="palette-item">
+          <span class="palette-item-num">03</span>
+          <div class="palette-item-info">
+            <div class="palette-item-title">Skills</div>
+            <div class="palette-item-desc">Technologies and tools I work with</div>
+          </div>
+          <span class="palette-item-arrow">↗</span>
+        </a>
+
+        <a href="index.html#contact" class="palette-item">
+          <span class="palette-item-num">04</span>
+          <div class="palette-item-info">
+            <div class="palette-item-title">Contact</div>
+            <div class="palette-item-desc">Get in touch & collaborative opportunities</div>
+          </div>
+          <span class="palette-item-arrow">↗</span>
+        </a>
+
+        <a href="publications.html" class="palette-item">
+          <span class="palette-item-num">05</span>
+          <div class="palette-item-info">
+            <div class="palette-item-title">Publications</div>
+            <div class="palette-item-desc">Academic papers and thesis work</div>
+          </div>
+          <span class="palette-item-arrow">↗</span>
+        </a>
+
+        <a href="cv.html" class="palette-item">
+          <span class="palette-item-num">06</span>
+          <div class="palette-item-info">
+            <div class="palette-item-title">Curriculum Vitae</div>
+            <div class="palette-item-desc">Read or download full CV document</div>
+          </div>
+          <span class="palette-item-arrow">↗</span>
+        </a>
+
+        <a href="learning.html" class="palette-item">
+          <span class="palette-item-num">07</span>
+          <div class="palette-item-info">
+            <div class="palette-item-title">Learning & Notes</div>
+            <div class="palette-item-desc">Essays on cognitive processes and research</div>
+          </div>
+          <span class="palette-item-arrow">↗</span>
+        </a>
+      </div>
+
+      <div class="palette-footer">
+        <span>Press <kbd style="font-family:inherit;background:var(--card-bg);padding:2px 4px;border:1px solid var(--card-border);border-radius:4px;">ESC</kbd> to close</span>
+        <span class="kbd-wrap">
+          <kbd class="key-cap">Cmd</kbd>
+          <span class="key-plus">+</span>
+          <kbd class="key-cap">K</kbd>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Theme Management
+    const themeToggleBtn = document.getElementById('theme-toggle-btn');
+    const moonIcon = document.getElementById('theme-icon-moon');
+    const sunIcon = document.getElementById('theme-icon-sun');
+    const htmlElement = document.documentElement;
+
+    function applyTheme(theme) {
+      htmlElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      if (theme === 'dark') {
+        moonIcon.style.display = 'none';
+        sunIcon.style.display = 'block';
+      } else {
+        moonIcon.style.display = 'block';
+        sunIcon.style.display = 'none';
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    applyTheme(savedTheme);
+
+    themeToggleBtn.addEventListener('click', () => {
+      const current = htmlElement.getAttribute('data-theme');
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    // Command Palette Modal
+    const paletteModal = document.getElementById('palette-modal');
+    const openPaletteBtn = document.getElementById('open-palette-btn');
+    const closePaletteBtn = document.getElementById('close-palette-btn');
+    const paletteSearchInput = document.getElementById('palette-search-input');
+    const paletteList = document.getElementById('palette-items-list');
+    const paletteItems = Array.from(paletteList.querySelectorAll('.palette-item'));
+
+    function openModal() {
+      paletteModal.classList.add('active');
+      paletteModal.setAttribute('aria-hidden', 'false');
+      paletteSearchInput.value = '';
+      filterItems('');
+      setTimeout(() => paletteSearchInput.focus(), 50);
+    }
+
+    function closeModal() {
+      paletteModal.classList.remove('active');
+      paletteModal.setAttribute('aria-hidden', 'true');
+    }
+
+    if (openPaletteBtn) openPaletteBtn.addEventListener('click', openModal);
+    if (closePaletteBtn) closePaletteBtn.addEventListener('click', closeModal);
+
+    paletteModal.addEventListener('click', (e) => {
+      if (e.target === paletteModal) {
+        closeModal();
+      }
+    });
+
+    paletteItems.forEach(item => {
+      item.addEventListener('click', () => {
+        closeModal();
+      });
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        if (paletteModal.classList.contains('active')) {
+          closeModal();
+        } else {
+          openModal();
+        }
+      } else if (e.key === 'Escape' && paletteModal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+
+    function filterItems(query) {
+      const lower = query.toLowerCase().trim();
+      paletteItems.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        if (text.includes(lower)) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    paletteSearchInput.addEventListener('input', (e) => {
+      filterItems(e.target.value);
+    });
+  </script>
 </body>
 </html>

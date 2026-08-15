@@ -1,49 +1,397 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Publications - Elijah K. A. Boateng</title>
+  <title>Publications — Elijah Boateng</title>
+  <meta name="description" content="Academic publications, honors thesis, and peer-reviewed research by Elijah Boateng across biometric systems, computer vision, and healthcare AI.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
-  <header>
-    <div class="header-identity">
-      <img class="site-avatar" src="avatar.png" alt="Portrait of Elijah K. A. Boateng">
-      <h1>Elijah K. A. Boateng</h1>
+
+  <!-- Floating Navigation Pill (Home Icon Logo on Secondary Page) -->
+  <header class="nav-pill-wrapper">
+    <div class="nav-pill">
+      <a href="index.html" class="nav-logo" aria-label="Home">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </a>
+
+      <div class="nav-pill-actions">
+        <button class="nav-search-btn" id="open-palette-btn" aria-label="Search portfolio">
+          <span class="nav-search-left">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <span>Search..</span>
+          </span>
+          <span class="kbd-wrap">
+            <kbd class="key-cap">Cmd</kbd>
+            <span class="key-plus">+</span>
+            <kbd class="key-cap">K</kbd>
+          </span>
+        </button>
+        <button class="nav-theme-btn" id="theme-toggle-btn" aria-label="Toggle theme">
+          <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg id="theme-icon-sun" style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+      </div>
     </div>
-    <p class="subtitle">Publications, thesis work, and academic outputs.</p>
-    <nav aria-label="Primary navigation">
-      <a href="index.html">home</a><span class="sep">/</span>
-      <a href="projects.html">projects</a><span class="sep">/</span>
-      <a href="publications.html" aria-current="page">publications</a><span class="sep">/</span>
-      <a href="learning.html">learning</a><span class="sep">/</span>
-      <a href="cv.html">cv</a><span class="sep">/</span>
-      <a href="index.html#contact">contact</a>
-    </nav>
   </header>
 
-  <main id="content">
-    <section>
-      <h2>Publications and academic work</h2>
-      <ul class="plain-list">
-        <li>
-          <p>Mensah JA, Appati JK, Boateng EKA, Ocran E. FaceNet recognition algorithm subject to multiple constraints: Assessment of the performance.</p>
-          <p class="muted">Scientific African, 2024.</p>
-          <p><a href="https://www.sciencedirect.com/science/article/pii/S2468227623004611" target="_blank" rel="noopener noreferrer">paper</a></p>
-        </li>
-        <li>
-          <p>Boateng EKA. Face Recognition under Multiple Constraints with Application to Attendance Management.</p>
-          <p class="muted">Undergraduate thesis (Best Computer Science Thesis), 2023.</p>
-          <p><a href="https://air.ashesi.edu.gh/bitstreams/31eec2ee-e3a2-4b11-b246-c02420015158/download" target="_blank" rel="noopener noreferrer">paper</a></p>
-        </li>
-      </ul>
+  <main class="container" id="content">
+    <section class="section" style="padding-top: 150px;">
+      <div class="section-header" style="border-top: none; padding-top: 0; margin-bottom: 40px;">
+        <div class="section-tagline">Academic Research</div>
+        <div class="section-title-row">
+          <h1 class="section-title">Publications & Research</h1>
+          <div class="section-meta">03 documents</div>
+        </div>
+      </div>
+
+      <div class="pub-list">
+        <!-- Publication 1: Scientific African (Elsevier Journal) -->
+        <article class="pub-card" id="pub-sciaf">
+          <div class="pub-top-row">
+            <div class="pub-badge-group">
+              <span class="pub-badge">Peer-Reviewed Journal • Elsevier</span>
+            </div>
+            <span class="pub-year-badge">2024</span>
+          </div>
+
+          <h2 class="pub-title">
+            FaceNet recognition algorithm subject to multiple constraints: Assessment of the performance
+          </h2>
+
+          <div class="pub-authors-venue">
+            <div class="pub-authors">
+              Mensah JA, Appati JK, <strong class="pub-author-me">Boateng EKA</strong>, Ocran E, Asiedu L.
+            </div>
+            <div class="pub-venue">
+              Published in <span class="pub-venue-name">Scientific African</span>, Volume 23, Article e02007 (Elsevier, 2024)
+            </div>
+          </div>
+
+          <div class="pub-tags-row">
+            <span class="pub-tag"><span class="pub-tag-key">Domain:</span> Computer Vision</span>
+            <span class="pub-tag"><span class="pub-tag-key">Algorithm:</span> MTCNN + FaceNet + DWT-PCA</span>
+            <span class="pub-tag"><span class="pub-tag-key">Loss:</span> Triplet Loss</span>
+            <span class="pub-tag"><span class="pub-tag-key">DOI:</span> 10.1016/j.sciaf.2023.e02007</span>
+          </div>
+
+          <div class="pub-actions-row">
+            <div class="pub-links-group">
+              <a href="https://www.sciencedirect.com/science/article/pii/S2468227623004611" target="_blank" rel="noopener noreferrer" class="pub-action-btn primary">
+                <span>Read on ScienceDirect ↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Publication 2: Honors Thesis (Awarded Best Thesis) -->
+        <article class="pub-card" id="pub-thesis">
+          <div class="pub-top-row">
+            <div class="pub-badge-group">
+              <span class="pub-badge">Awarded Best CS Thesis '23 • Ashesi University</span>
+            </div>
+            <span class="pub-year-badge">2023</span>
+          </div>
+
+          <h2 class="pub-title">
+            Face Recognition under Multiple Constraints with Application to Attendance Management
+          </h2>
+
+          <div class="pub-authors-venue">
+            <div class="pub-authors">
+              <strong class="pub-author-me">Boateng EKA.</strong> (Advisors: Dr. Joseph A. Mensah & Dr. Justice K. Appati)
+            </div>
+            <div class="pub-venue">
+              Undergraduate Honors Thesis, Department of Computer Science, <span class="pub-venue-name">Ashesi University</span>
+            </div>
+          </div>
+
+          <div class="pub-tags-row">
+            <span class="pub-tag"><span class="pub-tag-key">Type:</span> Honors Thesis</span>
+            <span class="pub-tag"><span class="pub-tag-key">Institution:</span> Ashesi University</span>
+            <span class="pub-tag"><span class="pub-tag-key">Award:</span> Best CS Thesis Award (Class of 2023)</span>
+            <span class="pub-tag"><span class="pub-tag-key">Handle:</span> 20.500.11988/1029</span>
+          </div>
+
+          <div class="pub-actions-row">
+            <div class="pub-links-group">
+              <a href="https://hdl.handle.net/20.500.11988/1029" target="_blank" rel="noopener noreferrer" class="pub-action-btn primary">
+                <span>View Thesis on Ashesi AIR ↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Publication 3: iGEM 2022 Biosensor Journal Paper -->
+        <article class="pub-card" id="pub-igem">
+          <div class="pub-top-row">
+            <div class="pub-badge-group">
+              <span class="pub-badge">Interdisciplinary Journal • iGEM 2022</span>
+            </div>
+            <span class="pub-year-badge">2022</span>
+          </div>
+
+          <h2 class="pub-title">
+            An Affordable & Fast Approach to Gold Prospecting in Ghana
+          </h2>
+
+          <div class="pub-authors-venue">
+            <div class="pub-authors">
+              Team AshesiGhana.
+            </div>
+            <div class="pub-venue">
+              Published in <span class="pub-venue-name">Global Journal of Collaborative Research</span> (Stony Brook University / iGEM Paris, 2022)
+            </div>
+          </div>
+
+          <div class="pub-tags-row">
+            <span class="pub-tag"><span class="pub-tag-key">Domain:</span> Synthetic Biology & Biosensors</span>
+            <span class="pub-tag"><span class="pub-tag-key">Award:</span> Silver Medallist (iGEM Paris 2022)</span>
+            <span class="pub-tag"><span class="pub-tag-key">Grant:</span> $5,000 Safety & Biosecurity Grant</span>
+          </div>
+
+          <div class="pub-actions-row">
+            <div class="pub-links-group">
+              <a href="https://2022.igem.wiki/stony-brook/collaborations/global-journal" target="_blank" rel="noopener noreferrer" class="pub-action-btn primary">
+                <span>Read Global Journal Article ↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
   </main>
 
+  <!-- Full Width Divider -->
+  <hr class="full-divider">
+
   <footer>
-    <p>&copy; 2026 Elijah K. A. Boateng</p>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">E</div>
+          <div>
+            <div class="footer-name">Elijah Kwaku Adutwum Boateng</div>
+            <div class="footer-role">AI Research Engineer • MPhil Candidate</div>
+          </div>
+        </div>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="publications.html">Publications</a>
+          <a href="cv.html">CV</a>
+        </nav>
+        <div class="footer-copy">
+          Accra, Ghana • &copy; 2026
+        </div>
+      </div>
+    </div>
   </footer>
+
+  <!-- Command Palette / Search Modal -->
+  <div class="modal-overlay" id="palette-modal" aria-hidden="true">
+    <div class="palette-modal">
+      <div class="palette-search-row">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" class="palette-input" id="palette-search-input" placeholder="Search publications, thesis, articles..." autocomplete="off">
+        <button class="palette-close-btn" id="close-palette-btn" aria-label="Close search">✕</button>
+      </div>
+      
+      <div class="palette-list" id="palette-items-list">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <div class="palette-footer">
+        <span>Press <kbd style="font-family:inherit;background:var(--card-bg);padding:2px 4px;border:1px solid var(--card-border);border-radius:4px;">ESC</kbd> to close</span>
+        <span class="kbd-wrap">
+          <kbd class="key-cap">Cmd</kbd>
+          <span class="key-plus">+</span>
+          <kbd class="key-cap">K</kbd>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Theme Management
+    const themeToggleBtn = document.getElementById('theme-toggle-btn');
+    const moonIcon = document.getElementById('theme-icon-moon');
+    const sunIcon = document.getElementById('theme-icon-sun');
+    const htmlElement = document.documentElement;
+
+    function applyTheme(theme) {
+      htmlElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      if (theme === 'dark') {
+        moonIcon.style.display = 'none';
+        sunIcon.style.display = 'block';
+      } else {
+        moonIcon.style.display = 'block';
+        sunIcon.style.display = 'none';
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    applyTheme(savedTheme);
+
+    themeToggleBtn.addEventListener('click', () => {
+      const current = htmlElement.getAttribute('data-theme');
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    // =========================================================================
+    // DYNAMIC FULL-TEXT SEARCH ENGINE
+    // =========================================================================
+    const searchDatabase = [
+      { title: "Home Portfolio", desc: "Return to main homepage portfolio and selected work", tag: "PAGE", url: "index.html" },
+      { title: "Selected Work", desc: "Aires Clinical CDS, FaceNet biometrics, StudentOS, Interius multi-agent, wav2vec-U, Whisper", tag: "SECTION", url: "index.html#work" },
+      { title: "Publications & Research", desc: "Scientific African (Elsevier 2024), Ashesi Honors Thesis, iGEM Bio-Prospecting Journal Paper", tag: "PAGE", url: "publications.html" },
+      { title: "Research Interests & Goals", desc: "Multi-agent learning, healthcare CDS, low-resource speech ASR, biometrics under constraints", tag: "SECTION", url: "index.html#research" },
+      { title: "Curriculum Vitae", desc: "Complete academic and engineering CV document with PDF download", tag: "PAGE", url: "cv.html" },
+
+      // Publications
+      { title: "FaceNet Assessment of Performance (Elsevier)", desc: "Scientific African — Empirical evaluation under mask occlusion, yaw angles, illumination shifts, Triplet loss", tag: "PAPER", selector: "#pub-sciaf" },
+      { title: "Face Recognition Attendance Management Thesis", desc: "Best CS Thesis '23 — Constraint-tolerant biometric verification system for institutional tracking", tag: "THESIS", selector: "#pub-thesis" },
+      { title: "Gold Prospecting Biosensor Article (iGEM)", desc: "Global Journal / Stony Brook — Multi-functional bacterial biosensor for pathfinder mineral detection", tag: "PAPER", selector: "#pub-igem" }
+    ];
+
+    const paletteModal = document.getElementById('palette-modal');
+    const openPaletteBtn = document.getElementById('open-palette-btn');
+    const closePaletteBtn = document.getElementById('close-palette-btn');
+    const paletteSearchInput = document.getElementById('palette-search-input');
+    const paletteList = document.getElementById('palette-items-list');
+
+    function renderSearchResults(query) {
+      paletteList.innerHTML = '';
+      const clean = query.toLowerCase().trim();
+
+      const matches = clean === '' 
+        ? searchDatabase.slice(0, 6) 
+        : searchDatabase.filter(item => {
+            return item.title.toLowerCase().includes(clean) || item.desc.toLowerCase().includes(clean) || item.tag.toLowerCase().includes(clean);
+          });
+
+      if (matches.length === 0) {
+        paletteList.innerHTML = `
+          <div style="padding: 24px; text-align: center; color: var(--text-muted); font-size: 13.5px;">
+            No results found for "<strong style="color:var(--text-primary);">${escapeHTML(query)}</strong>".
+          </div>
+        `;
+        return;
+      }
+
+      matches.forEach((item, idx) => {
+        const itemEl = document.createElement('a');
+        itemEl.className = 'palette-item';
+        itemEl.href = item.url || '#';
+
+        let highlightedTitle = item.title;
+        let highlightedDesc = item.desc;
+
+        if (clean !== '') {
+          const regex = new RegExp(`(${clean.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+          highlightedTitle = highlightedTitle.replace(regex, '<span class="palette-snippet-highlight">$1</span>');
+          highlightedDesc = highlightedDesc.replace(regex, '<span class="palette-snippet-highlight">$1</span>');
+        }
+
+        itemEl.innerHTML = `
+          <span class="palette-item-num">${String(idx + 1).padStart(2, '0')}</span>
+          <div class="palette-item-info">
+            <div class="palette-item-title">
+              ${highlightedTitle}
+              <span class="palette-match-tag">${item.tag}</span>
+            </div>
+            <div class="palette-item-desc">${highlightedDesc}</div>
+          </div>
+          <span class="palette-item-arrow">↗</span>
+        `;
+
+        itemEl.addEventListener('click', (e) => {
+          if (item.selector) {
+            const targetEl = document.querySelector(item.selector);
+            if (targetEl) {
+              e.preventDefault();
+              closeModal();
+              targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              targetEl.classList.remove('search-match-highlight');
+              void targetEl.offsetWidth;
+              targetEl.classList.add('search-match-highlight');
+              return;
+            }
+          }
+        });
+
+        paletteList.appendChild(itemEl);
+      });
+    }
+
+    function escapeHTML(str) {
+      return str.replace(/[&<>'"]/g, 
+        tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+      );
+    }
+
+    function openModal() {
+      paletteModal.classList.add('active');
+      paletteModal.setAttribute('aria-hidden', 'false');
+      paletteSearchInput.value = '';
+      renderSearchResults('');
+      setTimeout(() => paletteSearchInput.focus(), 50);
+    }
+
+    function closeModal() {
+      paletteModal.classList.remove('active');
+      paletteModal.setAttribute('aria-hidden', 'true');
+    }
+
+    if (openPaletteBtn) openPaletteBtn.addEventListener('click', openModal);
+    if (closePaletteBtn) closePaletteBtn.addEventListener('click', closeModal);
+
+    paletteModal.addEventListener('click', (e) => {
+      if (e.target === paletteModal) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        if (paletteModal.classList.contains('active')) {
+          closeModal();
+        } else {
+          openModal();
+        }
+      } else if (e.key === 'Escape' && paletteModal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+
+    paletteSearchInput.addEventListener('input', (e) => {
+      renderSearchResults(e.target.value);
+    });
+  </script>
 </body>
 </html>
